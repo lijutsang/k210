@@ -1,0 +1,6 @@
+ncc编译tflite-->kmodel 
+root@ubuntu:/home/liju/nncase# 
+/home/liju/nncase/ncc compile /home/liju/nncase/examples/20classes_yolo/model/20classes_yolo.tflite /home/liju/nncase/examples/20classes_yolo/k210/kpu_20classes_example/test.kmodel -i tflite -o kmodel -t k210 --dataset /home/liju/nncase/examples/20classes_yolo/images
+
+pip升级所有可升级的包
+ pip freeze --local | grep -v '^-e' | cut -d = -f 1  | xargs -n1 pip install -U
